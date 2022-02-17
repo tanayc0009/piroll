@@ -12,9 +12,15 @@
 		/>
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
-	<body>
+	<body onload="preLoaderFunc()">
+		<div id="preloader">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+
 		<!--  Header Section Start  -->
-		<div class="header_section" id="header">
+		<header class="header_section" id="header">
 			<div class="container">
 				<div>
 					<a href="piroll.html"
@@ -35,10 +41,10 @@
 					<a href="#" onclick="toggleNavbar()">Contact</a>
 				</nav>
 			</div>
-		</div>
+		</header>
 		<!--  Header Section End -->
 		<!-- Banner Section Start -->
-		<div class="banner_section">
+		<section class="banner_section">
 			<div class="inner_banner">
 				<div class="container">
 					<div class="left">
@@ -58,10 +64,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- Banner Section End -->
 		<!-- ABOUT Section START -->
-		<div class="about_section" id="about">
+		<section class="about_section" id="about">
 			<div class="container">
 				<h2>About</h2>
 				<p>
@@ -75,10 +81,10 @@
 				</p>
 				<p class="signature">Tanay Chandra</p>
 			</div>
-		</div>
+		</section>
 		<!-- ABOUT Section END -->
 		<!-- Skill Section START -->
-		<div id="skill" class="skill_section">
+		<section id="skill" class="skill_section">
 			<div class="container">
 				<div class="left">
 					<h2>Professional Skill</h2>
@@ -116,10 +122,10 @@
 					<img src="img/3/skill.jpg" alt="" />
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- Skill Section END -->
 		<!-- PROCESS Section START -->
-		<div id="process" class="process_section">
+		<section id="process" class="process_section">
 			<div class="container">
 				<div class="items">
 					<div><img src="img/process/job.png" alt="Project Completed" /></div>
@@ -155,10 +161,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- PROCESS Section END -->
 		<!-- SERVICES Section START -->
-		<div id="services" class="service_section">
+		<section id="services" class="service_section">
 			<div class="container">
 				<div><h2>Our Project's</h2></div>
 				<div class="service_container">
@@ -216,10 +222,10 @@
 					<button>Load More...</button>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- SERVICES Section END -->
 		<!-- WORK PROCESS SECTION START -->
-		<div class="vedio_section">
+		<section class="vedio_section">
 			<div class="container">
 				<div>
 					<h2>Our Work Process</h2>
@@ -230,17 +236,27 @@
 				</div>
 				<div class="vedio_container">
 					<!-- <video width="920" height="540" controls> -->
-					<video controls>
+					<!-- <video controls>
 						<source src="vedio/vedio.mp4" type="video/mp4" />
 						Your browser does not support the video tag.
-					</video>
+					</video> -->
+
+					<iframe
+						width="1350"
+						height="498"
+						src="https://www.youtube.com/embed/E7mGqt7v3Uc"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
 				</div>
 			</div>
-		</div>
+		</section>
 		<!-- WORK PROCESS SECTION END -->
 		<!-- SLIDER SECTION START -->
 
-		<div class="slider_section" id="testimonial">
+		<section class="slider_section" id="testimonial">
 			<div class="container">
 				<!-- <div class="button_container">
 					<div class="buttons active"></div>
@@ -287,9 +303,15 @@
 					<span class="author">"Tanay Chandra"</span>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- SLIDER SECTION END -->
 		<script src="js/script.js"></script>
+		<script>
+			function preLoaderFunc() {
+				var loader = document.getElementById('preloader');
+				loader.style.display = 'none';
+			}
+		</script>
 	</body>
 </html>
